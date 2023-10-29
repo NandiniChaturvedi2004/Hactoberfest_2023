@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main() 
+{   int N,b,sum_o=0,sum_e=0;
+    cin>>N;
+    b=N;      // to store value of n in another variable b 
+    while(N!=0)
+    {
+        int a;
+        a=N%10;
+        sum_o=sum_o+a;
+        N=N/10;    // because we need to skip one even place to go to next odd place 
+        N=N/10;
+    }
+    cout<<sum_o;
+    cout<<endl;
+    N=b;
+    N=N/10;
+    while(N!=0)
+    {
+        int c;
+        c=N%10;
+        sum_e=sum_e+c;
+        N=N/10;
+        N=N/10;
+
+    }
+    cout<<sum_e;
+
+    
+    return 0;
+}
